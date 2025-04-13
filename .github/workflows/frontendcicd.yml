@@ -12,7 +12,9 @@ jobs:
       - uses: actions/checkout@v2  # Using 'v2' instead of 'master' for stability
       - uses: jakejarvis/s3-sync-action@v0.5.0  # Specific version to avoid instability
         with:
-          args: --acl public-read --follow-symlinks --delete
+          args: --follow-symlinks --delete
+
+         # args: --acl public-read --follow-symlinks --delete
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}  
