@@ -1,9 +1,15 @@
 name: Upload the changes to S3
 
+#This is for automatic deployment
+#on:
+#  push:
+#    branches:
+#      - Main
+
+#This is for manual deployment from Github Actions
 on:
-  push:
-    branches:
-      - Main
+  workflow_dispatch:
+
 
 jobs:
   deploy:
