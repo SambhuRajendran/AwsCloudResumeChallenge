@@ -44,6 +44,16 @@
 						<li><a href="#four">Accomplishments</a></li>
 						<li><a href="#five">Projects</a></li>
 						<li><a href="Sambhu Rajendran, CISSP.pdf" download>Resume</a></li>
+						<li id="view-counter" style="display: flex; align-items: center; justify-content: center;">
+  <a href="#" style="pointer-events: none; display: flex; align-items: center; gap: 5px; font-size: 0.9em;">
+    <img src="https://img.icons8.com/ios-filled/20/ffffff/visible.png" alt="Views" style="width: 16px; height: 16px;" />
+    <span>Visitors: </span>   
+	<span id="views">...</span>
+  </a>
+</li>
+
+</li>
+
 						<!-- <li><a href="#five">Contact</a></li> -->
 					</ul>
 				</nav>
@@ -631,12 +641,37 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					<section id="footer">
 						<div class="container ">
 							<ul class="copyright">
-								<li>&copy; 2025 Sambhu. All rights reserved.</li> <!-- <li>creative design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+								<li>&copy; 2025 Sambhu Rajendran. All rights reserved.</li> <!-- <li>creative design: <a href="http://html5up.net">HTML5 UP</a></li> -->
 							</ul>
 						</div>
 					</section>
 
 			</div>
+
+<!-- Views counter-->
+
+<div id="view-counter" style="text-align: center; font-weight: bold; padding: 10px;">
+    Page Views: <span id="views">Loading...</span>
+</div>
+
+<script>
+  async function fetchViews() {
+    try {
+      const response = await fetch("https://oeogqmtiz32bwpycsdcxye2ktu0mumwi.lambda-url.us-east-1.on.aws/");
+      const data = await response.json();
+      document.getElementById("views").innerText = data.views || "N/A";
+    } catch (error) {
+      console.error("Failed to fetch view count:", error);
+      document.getElementById("views").innerText = "Error";
+    }
+  }
+
+  fetchViews();
+</script>
+
+
+
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
