@@ -235,19 +235,39 @@ Migrated legacy systems to the cloud, increasing reliability and uptime by 99%. 
 								</section>
 
 								<section id="five" class="bg-light">
-									
 									<div class="container">
 										<!--<h5>PORTFOLIO</h5>-->
 										<h3>Projects</h3>
+									
 										<div class="row">
-											<div class="col-6 col-6-xsmall portfolio">
-												<img class="image" src="images/portfolio/grafana.jpg">
+											<div class="col-12 portfolio">
+												<img class="image img-medium" src="images/cloudresume.jpg" 
+													 alt="Cloud Resume Challenge Architecture Diagram">
 												<div class="overlay">
+													<!-- This is the new title on top of overlay -->
+													<h4 class="overlay-title">AWS Cloud Resume Challenge</h4>
+									
+													<!-- Existing eye icon -->
 													<div class="overlayeye">
 														<i class="fa fa-eye" aria-hidden="true"></i>
 													</div>
-												  </div>
+												</div>
 											</div>
+										</div>
+									</div>
+									
+										  <!-- ✅ View Counter placed at the very bottom of the content -->
+
+
+									<!-- <div class="row">
+										<div class="col-6 col-6-xsmall portfolio">
+											<img class="image" src="images/portfolio/grafana.jpg">
+											<div class="overlay">
+												<div class="overlayeye">
+													<i class="fa fa-eye" aria-hidden="true"></i>
+												</div>
+												</div>
+										</div>
 											<div class="col-6 col-6-xsmall portfolio">
 												<img class="image" src="images/portfolio/grafana.jpg">
 												<div class="overlay">
@@ -278,7 +298,7 @@ Migrated legacy systems to the cloud, increasing reliability and uptime by 99%. 
 										</div>
 										
 								 </div>
-									</div>
+									</div> -->
 								</section>
 
 
@@ -638,41 +658,21 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					</div>
 
 				<!-- Footer -->
-					<section id="footer">
-						<div class="container ">
-							<ul class="copyright">
-								<li>&copy; 2025 Sambhu Rajendran. All rights reserved.</li> <!-- <li>creative design: <a href="http://html5up.net">HTML5 UP</a></li> -->
-							</ul>
-						</div>
-					</section>
 
-			</div>
+  <!-- Footer -->
+<section id="footer">
+	<div class="container">
+	  <ul class="copyright">
+		<li>&copy; 2025 Sambhu Rajendran. All rights reserved.</li>
+	  </ul>
+	</div>
+  </section>
+  
 
-<!-- Views counter-->
-
-<div id="view-counter" style="text-align: center; font-weight: bold; padding: 10px;">
-    Page Views: <span id="views">Loading...</span>
-</div>
-
-<script>
-  async function fetchViews() {
-    try {
-      const response = await fetch("https://oeogqmtiz32bwpycsdcxye2ktu0mumwi.lambda-url.us-east-1.on.aws/");
-      const data = await response.json();
-      document.getElementById("views").innerText = data.views || "N/A";
-    } catch (error) {
-      console.error("Failed to fetch view count:", error);
-      document.getElementById("views").innerText = "Error";
-    }
-  }
-
-  fetchViews();
-</script>
-
-
-
-
-
+  
+  
+  
+  
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -682,6 +682,31 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<!-- View Counter 
+<div style="text-align: center; font-weight: bold; margin-top: 1em;">
+  👁️ Page Views: <span id="views">Loading...</span>
+</div> -->
+
+<script>
+  window.addEventListener("load", function () {
+    fetch("https://oeogqmtiz32bwpycsdcxye2ktu0mumwi.lambda-url.us-east-1.on.aws/")
+      .then(response => response.json())
+      .then(data => {
+        console.log("JSON received:", data);
+        const el = document.getElementById("views");
+        if (el) el.innerText = data.views || "N/A";
+        else console.warn("Element #views not found!");
+      })
+      .catch(error => {
+        console.error("View count error:", error);
+        const el = document.getElementById("views");
+        if (el) el.innerText = "Error";
+      });
+  });
+</script>
+
 
 	</body>
 </html>

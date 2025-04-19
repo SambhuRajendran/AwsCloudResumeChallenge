@@ -72,6 +72,18 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Image size edit */ 
+.img-medium {
+    width: 70%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
 /* Basic */
 
 	html {
@@ -273,11 +285,14 @@ input, select, textarea {
 
 /* portfolio style */
 
-.portfolio {
-	position: relative;
-	width: 50%;
-  }
-  
+  .portfolio {
+    position: relative;
+	display: inline-block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
   .image {
 	display: block;
 	width: 100%;
@@ -285,16 +300,19 @@ input, select, textarea {
   }
   
   .overlay {
-	position: absolute;
-	bottom: 0;
-	left: 100%;
-	right: 0;
-	background-color: #4acaa8;
-	overflow: hidden;
-	width: 0;
-	height: 100%;
-	transition: .5s ease;
-  }
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(74, 202, 168, 0.9); /* translucent green */
+    width: 0;
+    height: 100%;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+.portfolio:hover .overlay {
+    opacity: 1;
+}
+
   
   .portfolio:hover .overlay {
 	width: 100%;
@@ -326,6 +344,19 @@ input, select, textarea {
 	transform: translate(-50%, -50%);
 	white-space: nowrap;
   }
+
+
+  .overlay-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
   /* Tags */
 
   .tag-cloud {

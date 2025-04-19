@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sambhu Rajendran</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Content sections here... -->
+
+			</div>
+
+			<!-- Footer -->
+			<section id="footer">
+				<div class="container">
+					<ul class="copyright">
+						<li>&copy; 2025 Sambhu Rajendran. All rights reserved.</li>
+					</ul>
+				</div>
+			</section>
+
+		</div>
+
+		<!-- View Counter (placed at the very end of body) -->
+		<div style="text-align: center; font-weight: bold; margin-top: 1em;">
+			👁️ Page Views: <span id="views">Loading...</span>
+		</div>
+
+		<script>
+			window.addEventListener("load", function () {
+				fetch("https://oeogqmtiz32bwpycsdcxye2ktu0mumwi.lambda-url.us-east-1.on.aws/")
+					.then(response => response.json())
+					.then(data => {
+						console.log("JSON received:", data);
+						const el = document.getElementById("views");
+						if (el) el.innerText = data.views || "N/A";
+						else console.warn("Element #views not found!");
+					})
+					.catch(error => {
+						console.error("View count error:", error);
+						const el = document.getElementById("views");
+						if (el) el.innerText = "Error";
+					});
+			});
+		</script>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
