@@ -60,15 +60,6 @@ This project is built entirely using **AWS** services with **CI/CD automation** 
 - ✅ CI/CD using GitHub Actions for deployment
 - ✅ Visitor counter using Lambda + DynamoDB (working, frontend integration pending)
 
----
-
-## 📊 Roadmap
-
-- [ ] Display visit count on webpage (frontend JS + API Gateway)
-- [ ] Add unit tests for Lambda function
-- [ ] Use Terraform/CDK to manage infrastructure as code
-- [ ] Improve portfolio section with interactive project links
-- [ ] Add security headers (via Lambda@Edge or CloudFront)
 
 ---
 
