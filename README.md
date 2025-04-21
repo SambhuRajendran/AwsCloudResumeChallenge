@@ -15,6 +15,8 @@ This project is built entirely using **AWS** services with **CI/CD automation** 
 
 ## 🌍 Architecture
 
+
+
 - **Frontend**
   - Static website hosted in an **S3 bucket**
   - Delivered using **CloudFront CDN** for performance and HTTPS support
@@ -52,6 +54,8 @@ This project is built entirely using **AWS** services with **CI/CD automation** 
 
 
 ## ✨ Features
+
+![cloudresume](https://github.com/user-attachments/assets/082906bf-2b3c-4ab6-b495-93fbde0f866f)
 
 - ✅ Fully responsive static resume website
 - ✅ Custom domain via Namecheap
