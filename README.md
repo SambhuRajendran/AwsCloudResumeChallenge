@@ -3,7 +3,7 @@
 
 Welcome to my implementation of the [Cloud Resume Challenge](https://cloudresumechallenge.dev/) — a hands-on project that demonstrates my cloud, DevOps, and serverless skills by building and deploying a personal resume website using AWS services.
 
-You can view the site live at 👉 **https://sambhurajendran.com**
+Please view the site live at 👉 **https://sambhurajendran.com**
 
 ---
 
