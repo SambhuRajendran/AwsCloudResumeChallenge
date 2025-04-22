@@ -72,7 +72,7 @@ This project is built entirely using **AWS** services with **CI/CD automation** 
 I'm **Sambhu Rajendran**, a CISSP, Security+, AWS Solutions Architect – Associate certified professional with a background in networking, cloud, and cybersecurity. This project represents my journey into **DevSecOps** and my passion for hands-on learning.
 
 🔗 [LinkedIn](https://www.linkedin.com/in/sambhurajendran)  
-📧 sambhurajendran10@gmail.com
+📧 contact@sambhurajendran.com
 
 ---
 
