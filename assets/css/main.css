@@ -283,41 +283,60 @@ input, select, textarea {
 	width: 35em;
   }
 
-/* portfolio style */
+/*Clickable hand*/
 
-  .portfolio {
-    position: relative;
-	display: inline-block;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+.project-link {
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  color: inherit; /* Keeps the overlay text white */
 }
 
+.project-link:hover {
+  cursor: pointer;
+}
+
+/* portfolio style */
+
+.portfolio {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 300px; /* Fixed height */
+  overflow: hidden;
+  margin: 1.5em auto;
+}  
+
+.img-medium {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills container while maintaining aspect */
+  display: block;
+}
   .image {
 	display: block;
 	width: 100%;
 	height: auto;
   }
   
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(74, 202, 168, 0.9); /* translucent green */
-    width: 0;
-    height: 100%;
-    transition: all 0.4s ease;
-    overflow: hidden;
-}
+.overlay {
+  position: absolute;
+  inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+  background-color: rgba(74, 202, 168, 0.9);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}  
+
+
 .portfolio:hover .overlay {
     opacity: 1;
 }
-
   
-  .portfolio:hover .overlay {
-	width: 100%;
-	left: 0;
-  }
+
   .portfolio:hover {
 	transform: scale(1.01);
   }
@@ -333,28 +352,18 @@ input, select, textarea {
 	transform: translate(-50%, -50%);
 	white-space: nowrap;
   }
-  .overlayeye{
-	color: white;
-	font-size: 80px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	white-space: nowrap;
-  }
 
 
-  .overlay-title {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-align: center;
+.overlay-title {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.overlayeye {
+  color: white;
+  font-size: 2.5em;
 }
 
   /* Tags */
